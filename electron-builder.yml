@@ -36,6 +36,9 @@ nsis:
   allowToChangeInstallationDirectory: true
 linux:
   icon: './build/alt/icons'
+  mimeTypes: ['x-scheme-handler/earthdata-download']
+  desktop:
+    exec: "earthdata-download %u"
   target:
     - target: AppImage
       arch:
