@@ -11,6 +11,7 @@ import getLinksSchema from '../getLinksSchema.json'
 import isTrustedLink from './isTrustedLink'
 
 import packageDetails from '../../../package.json'
+import https from 'https'
 
 const ajv = new Ajv()
 
@@ -80,10 +81,20 @@ const fetchLinks = async ({
         headers.Authorization = getLinksToken
       }
 
-      response = await fetch(updatedUrl, {
-        headers,
-        method: 'get'
-      })
+      const agent = new https.Agent({
+          rejectUnauthorized: false, // Allow self-signed certs
+      });
+      try {
+        response = await fetch(updatedUrl, {
+          headers,
+          method: 'get',
+          agent: agent,
+        })
+      } catch (error) {
+        console.log(`url: ${updatedUrl}`)
+        console.log("Error fetching.")
+        console.log(`${JSON.stringify(error)}`)
+      }
 
       // eslint-disable-next-line no-await-in-loop
       const jsonResponse = await response.json()

@@ -8,5 +8,9 @@
   "api.search.uat.earthdatacloud.nasa.gov": { "notes": "Corresponds to search.uat.earthdata.nasa.gov" },
   "api.search.earthdatacloud.nasa.gov": { "notes": "Corresponds to search.earthdata.nasa.gov" },
   "searchprodapi-1167262027.auto.earthdatacloud.nasa.gov": { "notes": "Corresponds to search.earthdata.nasa.gov" },
-  "searchuatapi-2287602643.auto.earthdatacloud.nasa.gov": { "notes": "Corresponds to search.uat.earthdata.nasa.gov" }
+  "searchuatapi-2287602643.auto.earthdatacloud.nasa.gov": { "notes": "Corresponds to search.uat.earthdata.nasa.gov" },
+  "http://dev.hermes.trst2284.dev.int.nsidc.org": { "notes": "Corresponds to Trey Stafford's DAT development VM" },
+  "dev.hermes.trst2284.dev.int.nsidc.org": { "notes": "Corresponds to Trey Stafford's DAT development VM" },
+  "https://dev.hermes.trst2284.dev.int.nsidc.org": { "notes": "Corresponds to Trey Stafford's DAT development VM" },
+  "nsidc.org": { "notes": "NSIDC hosts the data-access-tool backend." }
 }
